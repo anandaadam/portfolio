@@ -41,6 +41,10 @@ const StyledProjectsSection = styled.section`
     ${({ theme }) => theme.mixins.button};
     margin: 80px auto 0;
   }
+
+  .hidden-button {
+    display: none;
+  }
 `;
 
 const StyledProject = styled.li`
@@ -302,7 +306,7 @@ const Projects = () => {
         )}
       </ul>
 
-      <button className="more-button" onClick={() => setShowMore(!showMore)}>
+      <button className="more-button hidden-button" onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
       </button>
     </StyledProjectsSection>
